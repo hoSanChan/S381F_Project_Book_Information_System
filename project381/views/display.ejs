@@ -1,0 +1,60 @@
+<html>
+  
+<head>
+    <style>
+        body {
+            font-family: "Monoid", monospace;
+            background-color: #222;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h2 {
+            margin: 20px;
+            font-size: 20px;
+            text-align: left;
+        }
+        
+        ul {
+            margin: 20px;
+            padding: 0;
+            list-style-type: none;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        
+        a {
+            color: #ff9900;
+            text-decoration: none;
+            background-color: #333;
+            padding: 5px;
+            display: inline-block;
+            border-radius: 5px;
+        }
+        
+        a:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+  <body>
+  
+   
+   <H2>(<%= nItems %>) is found. There are (<%= nItems %>) books. </H2>
+      
+  <ul>
+ <% for (var i of items) { %>
+  <li>ISBN: <a href="/details?_id=<%= i._id %>"><%= i.isbn %></a></li>
+ <% } %>
+ </ul>
+     
+   <a href="/home">Back to home.</a>
+
+  
+ </body>
+
+</html>

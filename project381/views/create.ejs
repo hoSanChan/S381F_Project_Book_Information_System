@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <style>
+        body {
+            font-family: 'Monoid', monospace;
+            background-color: #222;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+
+        .jumbotron {
+            background-color: #222;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .jumbotron h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        form {
+            margin: 0 auto;
+            max-width: 500px;
+            padding: 20px;
+        }
+
+        form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        form input[type="text"],
+        form textarea {
+            width: 100%;
+            padding: 5px;
+            border-radius: 3px;
+            border: none;
+            background-color: #555;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        form input[type="submit"] {
+            background-color: #777;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #999;
+        }
+
+        small {
+            font-size: 12px;
+            color: #ccc;
+        }
+    </style>
+</head>
+
+
+<div>
+<body>
+    <div class="jumbotron text-center">
+            <h1>Create Book Information</h1>
+        </div>
+    <form action="/create" method="POST">
+	<label for='bookname'><b>Book Name*:</b></label><br>
+            <input type="text" id="bookname" name="bookname" placeholder=""><br><br>
+        <label for='isbn'><b>ISBN*:</b></label><br>
+            <input type="text" id="isbn" name="isbn" placeholder="" pattern="[0-9]{13}"><br>
+        <small>For Example:9780136019701 (13ditgits long)</small><br><br>
+        <label for='category'><b>Category:</b></label><br>
+            <input type="text" id="category" name="category" placeholder=""><br><br>
+        <label for='publisher'><b>Publisher:</b></label><br>
+            <input type="text" id="publisher" name="publisher" placeholder=""><br><br>
+        <label for='author'><b>Author:</b></label><br>
+            <input type="text" id="author" name="author" placeholder=""><br><br>
+        <label for='remark'><b>Remark:</b></label><br>
+            <textarea name="remark" id="remark" cols="50" rows="10" placeholder="Remark here"></textarea><br>
+        </p>
+        <input type="submit" value="Create" /> 
+    </form>    
+</body>
+</div>
+</html>

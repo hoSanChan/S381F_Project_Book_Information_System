@@ -1,0 +1,78 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login system</title>
+    <style>
+        body {
+            font-family: 'Monoid', monospace;
+            background-color: #222;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+
+        div {
+            background-color: #222;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #fff;
+            text-align: left;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #777;
+            border-radius: 3px;
+            width: 300px;
+            background-color: #444;
+            color: #fff;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #777;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Login Book Information Management System</h1>
+    </div>
+    <form action="/login" method="post">
+        <label for='username'><b>Username:</b></label><br>
+        <input type="text" id="username" name="username" placeholder=""><br><br>
+        <label for='password'><b>Password:</b></label><br>
+        <input type="password" id="password" name="password" placeholder=""><br><br>
+    <button type="submit">Login</button>
+</form>
+</body>
+</html>

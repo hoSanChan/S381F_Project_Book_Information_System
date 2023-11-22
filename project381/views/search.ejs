@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <style>
+    body {
+        font-family: "Monoid", monospace;
+        background-color: #222;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+    
+    h1 {
+        margin: 20px;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    form {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-top: 20px;
+        text-align: left;
+    }
+    
+    input[type="text"] {
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 10px;
+    }
+    
+    small {
+        display: block;
+        margin-top: 5px;
+        text-align: left;
+    }
+    
+    input[type="submit"] {
+        color: #ff9900;
+        text-decoration: none;
+        background-color: #333;
+        padding: 5px;
+        display: inline-block;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+    
+    p {
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    a {
+        color: #ff9900;
+        text-decoration: none;
+        background-color: #333;
+        padding: 5px;
+        display: inline-block;
+        border-radius: 5px;
+    }
+    
+    a:hover {
+        background-color: #444;
+    }
+</style>
+</head>
+
+
+<body>
+	
+<div class="jumbotron text-center">
+
+    <h1>Search Book Information</h1>
+
+    </div>
+	
+    <form action="/search" method="POST">
+
+    <label for="restaurantID"><b>Please input ISBN:</b></label>
+    <br>
+
+    <input type="text" id="isbn" name="isbn" placeholder="Type the restaurant ID" pattern="[0-9]{13}">
+    <br>
+
+    <small>Format: 1234567890123 (Only available for number)</small>
+    <br>
+	
+    <input type="submit" value="Search" />
+	
+    <p><a href='/home'>Back to home. </a></p>
+
+</body>
+
+</html>
+
